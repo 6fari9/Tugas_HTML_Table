@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tugas HTML Tables</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    h2 { margin-top: 2.5rem; }
+    table { border-collapse: collapse; width: 100%; max-width: 900px; }
+    caption { text-align: left; font-weight: bold; padding-bottom: .5rem; }
+    th, td { border: 1px solid #333; padding: 8px 10px; text-align: center; }
+    thead th { background-color: #4a7bd0; color: #fff; }
+    tbody th { background-color: #e8eefb; }
+    tbody tr:nth-child(even) td { background-color: #f6f6f6; }
+  </style>
+</head>
+<body>
+
+  <h1>Tugas HTML Tables</h1>
+
+  <!-- ================= GRADE A: Hasil Ujian (multi-level header) ================= -->
+  <h2>Grade A</h2>
+  <table>
+    <caption>Tabel Hasil Ujian</caption>
+    <thead>
+      <tr>
+        <th scope="col" rowspan="2">No</th>
+        <th scope="col" rowspan="2">Nama</th>
+        <th scope="colgroup" colspan="2">Teori</th>
+        <th scope="colgroup" colspan="2">Praktik</th>
+        <th scope="col" rowspan="2">Nilai Akhir</th>
+      </tr>
+      <tr>
+        <th scope="col">UTS</th>
+        <th scope="col">UAS</th>
+        <th scope="col">Tugas</th>
+        <th scope="col">Proyek</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <th scope="row">Andi</th>
+        <td>80</td><td>85</td><td>90</td><td>88</td><td>86</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <th scope="row">Budi</th>
+        <td>75</td><td>78</td><td>85</td><td>80</td><td>79.5</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <th scope="row">Citra</th>
+        <td>92</td><td>90</td><td>95</td><td>93</td><td>92.5</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ================= GRADE B: Laporan Mahasiswa (rowspan + colspan) ================= -->
+  <h2>Grade B</h2>
+  <table>
+    <caption>Laporan Mahasiswa</caption>
+    <thead>
+      <tr>
+        <th scope="col">NIM</th>
+        <th scope="col">Nama</th>
+        <th scope="col">Semester</th>
+        <th scope="col">Mata Kuliah</th>
+        <th scope="col">SKS</th>
+        <th scope="col">Nilai</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="4">2024001</td>
+        <th scope="row" rowspan="4">Andi</th>
+        <td rowspan="2">1</td>
+        <td>Algoritma</td><td>3</td><td>A</td>
+      </tr>
+      <tr>
+        <td>Basis Data</td><td>3</td><td>B</td>
+      </tr>
+      <tr>
+        <td rowspan="2">2</td>
+        <td>Pemrograman Web</td><td>3</td><td>A</td>
+      </tr>
+      <tr>
+        <td>Jaringan Komputer</td><td>2</td><td>B</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row" colspan="4">Total SKS</th>
+        <td colspan="2">11</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <!-- ================= GRADE C: Jadwal Kuliah (basic) ================= -->
+  <h2>Grade C</h2>
+  <table>
+    <caption>Jadwal Kuliah</caption>
+    <thead>
+      <tr>
+        <th scope="col">Hari</th>
+        <th scope="col">Jam</th>
+        <th scope="col">Mata Kuliah</th>
+        <th scope="col">Ruang</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Senin</th>
+        <td>08.00 - 10.00</td><td>Algoritma</td><td>R101</td>
+      </tr>
+      <tr>
+        <th scope="row">Selasa</th>
+        <td>10.00 - 12.00</td><td>Basis Data</td><td>Lab 2</td>
+      </tr>
+      <tr>
+        <th scope="row">Rabu</th>
+        <td>13.00 - 15.00</td><td>Pemrograman Web</td><td>Lab 1</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
